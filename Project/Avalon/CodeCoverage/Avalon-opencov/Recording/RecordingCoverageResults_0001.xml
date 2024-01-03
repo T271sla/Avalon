@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
+  <Summary numSequencePoints="10" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" maxCrapScore="12" minCrapScore="2" visitedClasses="0" numClasses="3" visitedMethods="0" numMethods="3" />
+  <Modules>
+    <Module>
+      <Summary numSequencePoints="10" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" maxCrapScore="12" minCrapScore="2" visitedClasses="0" numClasses="3" visitedMethods="0" numMethods="3" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Assembly-CSharp</ModuleName>
+      <Files>
+        <File uid="1" fullPath="D:/Projects/Unity/Avalon/Assets/Colorblind/ColorBlindFilter.cs" />
+        <File uid="2" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Healthbar.cs" />
+        <File uid="3" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/AudioManager.cs" />
+        <File uid="4" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/GameManager.cs" />
+        <File uid="5" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/GridManager.cs" />
+        <File uid="6" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/InputManager.cs" />
+        <File uid="7" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/MenuManager.cs" />
+        <File uid="8" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/OptionsManager.cs" />
+        <File uid="9" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/SkillManager.cs" />
+        <File uid="10" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Managers/UnitManager.cs" />
+        <File uid="11" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Pathfinding.cs" />
+        <File uid="12" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Skills/Debilitate.cs" />
+        <File uid="13" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Skills/Heal.cs" />
+        <File uid="14" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Skills/Rage.cs" />
+        <File uid="15" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Skills/Skill.cs" />
+        <File uid="16" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Tiles/GrassTile.cs" />
+        <File uid="17" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Tiles/Tile.cs" />
+        <File uid="18" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Units/BaseUnit.cs" />
+        <File uid="19" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Units/Enemies/EnemyOne.cs" />
+        <File uid="20" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Units/Heroes/BaseHero.cs" />
+        <File uid="21" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Units/Heroes/HeroTwo.cs" />
+        <File uid="22" fullPath="D:/Projects/Unity/Avalon/Assets/Scripts/Units/Enemies/BaseEnemy.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" maxCrapScore="12" minCrapScore="12" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>UnitManager</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="3" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="12" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" maxCrapScore="12" minCrapScore="12" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663370</MetadataToken>
+              <Name>T UnitManager::GetRandomUnit[T](Faction)</Name>
+              <FileRef uid="10" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="3599" ordinal="0" offset="13" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3600" ordinal="0" offset="14" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3601" ordinal="0" offset="43" sl="69" sc="0" el="69" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3602" ordinal="0" offset="56" sl="70" sc="0" el="70" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3603" ordinal="0" offset="57" sl="71" sc="0" el="71" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3604" ordinal="0" offset="84" sl="72" sc="0" el="72" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3605" ordinal="0" offset="97" sl="75" sc="0" el="75" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="3606" ordinal="0" offset="153" sl="76" sc="0" el="76" ec="0" bec="0" bev="0" fileid="10" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>UnitManager&lt;&gt;c__DisplayClass11_0[T]</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663447</MetadataToken>
+              <Name>System.Boolean UnitManager&lt;&gt;c__DisplayClass11_0[T]::&lt;GetRandomUnit&gt;b__0(ScriptableUnit)</Name>
+              <FileRef uid="10" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="4100" ordinal="0" offset="0" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="10" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>UnitManager&lt;&gt;c__11[T]</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663450</MetadataToken>
+              <Name>System.Single UnitManager&lt;&gt;c__11[T]::&lt;GetRandomUnit&gt;b__11_1(ScriptableUnit)</Name>
+              <FileRef uid="10" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="4101" ordinal="0" offset="0" sl="75" sc="0" el="75" ec="0" bec="0" bev="0" fileid="10" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>

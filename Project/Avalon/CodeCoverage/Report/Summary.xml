@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>02.01.2024 - 23:05:54</Generatedon>
+    <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
+    <Assemblies>2</Assemblies>
+    <Classes>23</Classes>
+    <Files>23</Files>
+    <Coveredlines>795</Coveredlines>
+    <Uncoveredlines>175</Uncoveredlines>
+    <Coverablelines>970</Coverablelines>
+    <Totallines>1709</Totallines>
+    <Linecoverage>81.9</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>97</Coveredmethods>
+    <Totalmethods>125</Totalmethods>
+    <Methodcoverage>77.6</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Assembly-CSharp" classes="22" coverage="82.3" coveredlines="795" coverablelines="965" totallines="1684" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="97" totalmethods="123" methodcoverage="78.8">
+      <Class name="AudioManager" coverage="60" coveredlines="9" coverablelines="15" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="5" methodcoverage="60" />
+      <Class name="BaseEnemy" coverage="96.6" coveredlines="58" coverablelines="60" totallines="168" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="BaseHero" coverage="100" coveredlines="4" coverablelines="4" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="BaseUnit" coverage="97.7" coveredlines="85" coverablelines="87" totallines="135" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="9" methodcoverage="88.8" />
+      <Class name="ColorBlindFilter" coverage="66.6" coveredlines="16" coverablelines="24" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="Debilitate" coverage="100" coveredlines="8" coverablelines="8" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="EnemyOne" coverage="100" coveredlines="4" coverablelines="4" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="GameManager" coverage="61.5" coveredlines="48" coverablelines="78" totallines="142" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="10" methodcoverage="70" />
+      <Class name="GrassTile" coverage="0" coveredlines="0" coverablelines="4" totallines="14" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="GridManager" coverage="86.9" coveredlines="40" coverablelines="46" totallines="79" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
+      <Class name="Heal" coverage="93.9" coveredlines="31" coverablelines="33" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Healthbar" coverage="100" coveredlines="13" coverablelines="13" totallines="31" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="HeroTwo" coverage="100" coveredlines="8" coverablelines="8" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="InputManager" coverage="61.2" coveredlines="19" coverablelines="31" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
+      <Class name="MenuManager" coverage="73" coveredlines="125" coverablelines="171" totallines="248" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="20" totalmethods="30" methodcoverage="66.6" />
+      <Class name="OptionsManager" coverage="100" coveredlines="6" coverablelines="6" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="Pathfinding" coverage="96.2" coveredlines="77" coverablelines="80" totallines="119" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="6" methodcoverage="83.3" />
+      <Class name="Rage" coverage="63.6" coveredlines="14" coverablelines="22" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="Skill" coverage="20" coveredlines="1" coverablelines="5" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="SkillManager" coverage="100" coveredlines="22" coverablelines="22" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="Tile" coverage="91.6" coveredlines="120" coverablelines="131" totallines="183" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="13" methodcoverage="84.6" />
+      <Class name="UnitManager" coverage="76.9" coveredlines="87" coverablelines="113" totallines="169" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="14" methodcoverage="78.5" />
+    </Assembly>
+    <Assembly name="Tests" classes="1" coverage="0" coveredlines="0" coverablelines="5" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0">
+      <Class name="NewTestScript" coverage="0" coveredlines="0" coverablelines="5" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>
