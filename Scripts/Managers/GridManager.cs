@@ -30,21 +30,28 @@ public class GridManager : MonoBehaviour
                 var spawnedTile = Instantiate(baseGridTile, new Vector3(x, y), Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
 
-                tiles[new Vector2(x, y)] = spawnedTile;
+                Vector2 pos = new Vector2(x, y);
+                tiles[pos] = spawnedTile;
             }
         }
 
-        foreach (Transform child in grid.transform.GetChild(0))
+        var childLayer = grid.transform.GetChild(0);
+
+        foreach (Transform child in childLayer)
         {
             var spawnedTile = Instantiate(child, child.position, Quaternion.identity);
-            Tile tile = spawnedTile.GetComponent<Tile>();
-            child.GetComponent<Tile>().destroyTile();
-            Vector2 pos = new Vector2(0, 0);
-            pos.x = Mathf.Round(tile.transform.position.x);
-            pos.y = Mathf.Round(tile.transform.position.y);
-            tile.transform.position = pos;
-            tiles[tile.transform.position].destroyTile();
-            tiles[tile.transform.position] = tile;
+            Tile newTile = spawnedTile.GetComponent<Tile>();
+
+            Vector2 pos = new Vector2(Mathf.Round(newTile.transform.position.x), Mathf.Round(newTile.transform.position.y));
+            newTile.transform.position = pos;
+
+            if (tiles.ContainsKey(pos) && tiles[pos] != null)
+            {
+                Destroy(tiles[pos].gameObject);
+            }
+
+            tiles[pos] = newTile;
+            Destroy(child.gameObject);
         }
 
         GameManager.Instance.ChangeState(GameState.SpawnHeroes);

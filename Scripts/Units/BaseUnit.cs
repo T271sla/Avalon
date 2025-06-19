@@ -36,7 +36,7 @@ public class BaseUnit : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        if(skillObject != null ) 
+        if (skillObject != null)
         {
             skill = Instantiate(skillObject);
         }
@@ -54,7 +54,7 @@ public class BaseUnit : MonoBehaviour
     {
         float randomValue = UnityEngine.Random.Range(-9, 9);
         float attackValue = unitAttack * (attackBuff + unitTile.attackBonus) + randomValue;
-        if((Class == Class.Strength && enemy.Class == Class.Agility) || (Class == Class.Agility && enemy.Class == Class.Magic) || (Class == Class.Magic && enemy.Class == Class.Strength)) 
+        if ((Class == Class.Strength && enemy.Class == Class.Agility) || (Class == Class.Agility && enemy.Class == Class.Magic) || (Class == Class.Magic && enemy.Class == Class.Strength))
         {
             attackValue *= 1.2f;
         }
@@ -65,9 +65,9 @@ public class BaseUnit : MonoBehaviour
     public virtual void modifyHealth(float healthToChange)
     {
         unitHealth -= healthToChange;
-        if(unitHealth <= 0)
+        if (unitHealth <= 0)
         {
-            if(Faction.Equals(Faction.Enemy))
+            if (Faction.Equals(Faction.Enemy))
             {
                 UnitManager.Instance.enemies.Remove((BaseEnemy)this);
             }
@@ -78,7 +78,7 @@ public class BaseUnit : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(unitHealth > unitMaxHealth) 
+        if (unitHealth > unitMaxHealth)
         {
             unitHealth = unitMaxHealth;
         }
@@ -191,7 +191,7 @@ public class BaseUnit : MonoBehaviour
     {
         float score = 0;
 
-        if(move.Target != null) 
+        if (move.Target != null)
         {
             float distance = Vector2.Distance(move.Unit.transform.position, move.Target.transform.position);
             score += 100 - distance;
@@ -219,7 +219,7 @@ public class BaseUnit : MonoBehaviour
 
                 targetDistance = Pathfinding.GetDistanceBetween(hero.OccupiedTile, move.Tile);
 
-                if (targetDistance < closestTargetDistance) 
+                if (targetDistance < closestTargetDistance)
                 {
                     closestTargetDistance = targetDistance;
                 }

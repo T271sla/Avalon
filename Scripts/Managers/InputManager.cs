@@ -47,10 +47,5 @@ public class InputManager : MonoBehaviour
             MenuManager.Instance.showSelectedUnit(null);
             MenuManager.Instance.showFullTileInfo(null);
         }
-
-        if(Input.GetKey("k"))
-        {
-            SceneManager.LoadScene("Level 3");
-        }
     }
 }

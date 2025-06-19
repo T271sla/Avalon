@@ -70,7 +70,7 @@ public abstract class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.GameState != GameState.HeroesTurn) return;
+        if (GameManager.Instance.GameState != GameState.HeroesTurn || MenuManager.Instance.battleUIActive) return;
 
         if(OccupiedUnit != null)
         {

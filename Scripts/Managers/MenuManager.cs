@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public static MenuManager Instance;
     [SerializeField]
     private GameObject selectedHeroObject, tileObject, fullTileObject, tileUnitObject, battleMenuObject, skillButtonObject, cancelButtonObject, upgradeMenuObject,
-        pauseMenuObject, victoryScreenObject, loseScreenObject, playerPhaseObject, enemyPhaseObject, levelButtonsObject;
+        pauseMenuObject, victoryScreenObject, loseScreenObject, playerPhaseObject, enemyPhaseObject;
     [SerializeField] private TextMeshProUGUI textMeshProUGUI;
     public bool attackPressed = false;
     public bool skillsPressed = false;
@@ -31,12 +31,12 @@ public class MenuManager : MonoBehaviour
             tileUnitObject.SetActive(false);
             return;
         }
-        tileObject.GetComponentInChildren<Text>().text = tile.tileName;
+        tileObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.tileName;
         tileObject.SetActive(true);
 
         if(tile.OccupiedUnit != null) 
         {
-            tileUnitObject.GetComponentInChildren<Text>().text = tile.OccupiedUnit.unitName;
+            tileUnitObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.OccupiedUnit.unitName;
             tileUnitObject.SetActive(true);
         }
     }
@@ -48,10 +48,10 @@ public class MenuManager : MonoBehaviour
             fullTileObject.SetActive(false);
             return;
         }
-        fullTileObject.transform.GetChild(0).GetComponent<Text>().text = tile.tileName;
-        fullTileObject.transform.GetChild(1).GetComponent<Text>().text = (tile.attackBonus * 100).ToString() + "%";
-        fullTileObject.transform.GetChild(2).GetComponent<Text>().text = (tile.defenseBonus * 100).ToString() + "%";
-        fullTileObject.transform.GetChild(3).GetComponent<Text>().text = (tile.movementCost).ToString();
+        fullTileObject.transform.Find("Tile Name").GetComponent<TextMeshProUGUI>().text = tile.tileName;
+        fullTileObject.transform.Find("Attack Bonus Value").GetComponent<TextMeshProUGUI>().text = (tile.attackBonus * 100).ToString() + "%";
+        fullTileObject.transform.Find("Defense Bonus Value").GetComponent<TextMeshProUGUI>().text = (tile.defenseBonus * 100).ToString() + "%";
+        fullTileObject.transform.Find("Movement Cost Value").GetComponent<TextMeshProUGUI>().text = (tile.movementCost).ToString();
         fullTileObject.SetActive(true);
     }
 
@@ -63,28 +63,28 @@ public class MenuManager : MonoBehaviour
             return;
         }
 
-        selectedHeroObject.transform.GetChild(0).GetComponent<Text>().text = unit.unitName;
-        selectedHeroObject.transform.GetChild(1).GetComponent<Text>().text = unit.Class.ToString();
-        selectedHeroObject.transform.GetChild(2).GetComponent<Text>().text = unit.unitHealth.ToString() + "/" + unit.unitMaxHealth.ToString();
-        selectedHeroObject.transform.GetChild(3).GetComponent<Text>().text = (unit.unitAttack * unit.attackBuff).ToString();
-        selectedHeroObject.transform.GetChild(21).GetComponent<Text>().text = unit.unitAttack.ToString();
-        selectedHeroObject.transform.GetChild(4).GetComponent<Text>().text = unit.unitRange.ToString();
-        selectedHeroObject.transform.GetChild(5).GetComponent<Text>().text = unit.unitMove.ToString();
+        selectedHeroObject.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = unit.unitName;
+        selectedHeroObject.transform.Find("Class").GetComponent<TextMeshProUGUI>().text = unit.Class.ToString();
+        selectedHeroObject.transform.Find("HP Value").GetComponent<TextMeshProUGUI>().text = unit.unitHealth.ToString() + "/" + unit.unitMaxHealth.ToString();
+        selectedHeroObject.transform.Find("Attack Power Value").GetComponent<TextMeshProUGUI>().text = (unit.unitAttack * unit.attackBuff).ToString();
+        selectedHeroObject.transform.Find("Base Attack Power Value").GetComponent<TextMeshProUGUI>().text = unit.unitAttack.ToString();
+        selectedHeroObject.transform.Find("Attack Range Value").GetComponent<TextMeshProUGUI>().text = unit.unitRange.ToString();
+        selectedHeroObject.transform.Find("Move Range Value").GetComponent<TextMeshProUGUI>().text = unit.unitMove.ToString();
         if (unit.skill != null)
         {
-            selectedHeroObject.transform.GetChild(6).GetComponent<Text>().text = unit.skill.name;
-            selectedHeroObject.transform.GetChild(7).GetComponent<Text>().text = unit.skill.skillDescription;
-            selectedHeroObject.transform.GetChild(11).GetComponent<Text>().text = "Skill";
+            selectedHeroObject.transform.Find("Skill Name").GetComponent<TextMeshProUGUI>().text = unit.skill.skillName;
+            selectedHeroObject.transform.Find("Skill Description").GetComponent<TextMeshProUGUI>().text = unit.skill.skillDescription;
+            selectedHeroObject.transform.Find("Skill").GetComponent<TextMeshProUGUI>().text = "Skill";
         }
         else
         {
-            selectedHeroObject.transform.GetChild(6).GetComponent<Text>().text = "";
-            selectedHeroObject.transform.GetChild(7).GetComponent<Text>().text = "";
-            selectedHeroObject.transform.GetChild(11).GetComponent<Text>().text = "";
+            selectedHeroObject.transform.Find("Skill Name").GetComponent<TextMeshProUGUI>().text = "";
+            selectedHeroObject.transform.Find("Skill Description").GetComponent<TextMeshProUGUI>().text = "";
+            selectedHeroObject.transform.Find("Skill").GetComponent<TextMeshProUGUI>().text = "";
         }
-        selectedHeroObject.transform.GetChild(8).GetComponent<Text>().text = unit.OccupiedTile.tileName;
-        selectedHeroObject.transform.GetChild(9).GetComponent<Text>().text = (unit.OccupiedTile.attackBonus * 100).ToString() + "%";
-        selectedHeroObject.transform.GetChild(10).GetComponent<Text>().text = (unit.OccupiedTile.defenseBonus * 100).ToString() + "%";
+        selectedHeroObject.transform.Find("Tile Name").GetComponent<TextMeshProUGUI>().text = unit.OccupiedTile.tileName;
+        selectedHeroObject.transform.Find("Attack Bonus Value").GetComponent<TextMeshProUGUI>().text = (unit.OccupiedTile.attackBonus * 100).ToString() + "%";
+        selectedHeroObject.transform.Find("Defense Bonus Value").GetComponent<TextMeshProUGUI>().text = (unit.OccupiedTile.defenseBonus * 100).ToString() + "%";
         selectedHeroObject.SetActive(true);
     }
 
@@ -94,7 +94,7 @@ public class MenuManager : MonoBehaviour
         {
             if (UnitManager.Instance.selectedHero.transform.position.x < GridManager.Instance.width / 2)
             {
-                battleMenuObject.transform.position = new Vector2(Screen.width * 0.77f, battleMenuObject.transform.position.y);
+                battleMenuObject.transform.position = new Vector2(Screen.width * 0.76f, battleMenuObject.transform.position.y);
             }
             else
             {
@@ -162,7 +162,7 @@ public class MenuManager : MonoBehaviour
     public IEnumerator playerPhase()
     {
         yield return new WaitForSeconds(0.5f);
-        playerPhaseObject.GetComponentInChildren<Text>().text = "Turn " + GameManager.Instance.gameTurn.ToString();
+        playerPhaseObject.GetComponentInChildren<TextMeshProUGUI>().text = "Turn " + GameManager.Instance.gameTurn.ToString();
         playerPhaseObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         playerPhaseObject.SetActive(false);
@@ -171,7 +171,7 @@ public class MenuManager : MonoBehaviour
     public IEnumerator enemyPhase()
     {
         yield return new WaitForSeconds(0.5f);
-        enemyPhaseObject.GetComponentInChildren<Text>().text = "Turn " + GameManager.Instance.gameTurn.ToString();
+        enemyPhaseObject.GetComponentInChildren<TextMeshProUGUI>().text = "Turn " + GameManager.Instance.gameTurn.ToString();
         enemyPhaseObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         enemyPhaseObject.SetActive(false);
@@ -237,17 +237,30 @@ public class MenuManager : MonoBehaviour
 
     public void levelSelect()
     {
+        SceneManager.sceneLoaded += OnLevelSelectLoaded;
         SceneManager.LoadScene("Level Select");
+    }
 
-        for(int i = 1; i < levelButtonsObject.transform.childCount; i++) 
+    private void OnLevelSelectLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "Level Select") return;
+
+        GameObject levelButtonsObject = GameObject.Find("Level Buttons");
+
+        if (levelButtonsObject == null)
         {
-            if(i <= ProgressManager.Instance.completedLevels)
-            {
-                continue;
-            }
+            Debug.LogError("LevelButtonsParent GameObject not found in Level Select scene.");
+            SceneManager.sceneLoaded -= OnLevelSelectLoaded;
+            return;
+        }
 
+        for (int i = 1; i < levelButtonsObject.transform.childCount; i++)
+        {
+            if (i <= ProgressManager.Instance.completedLevels) continue;
             levelButtonsObject.transform.GetChild(i).gameObject.SetActive(false);
         }
+
+        SceneManager.sceneLoaded -= OnLevelSelectLoaded;
     }
 
     public void bookmarkButton()

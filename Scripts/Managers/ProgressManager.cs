@@ -37,7 +37,7 @@ public class ProgressManager : MonoBehaviour
 
         List<string> scenes = new List<string>();
 
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
         {
             string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
             scenes.Add(scenePath);

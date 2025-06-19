@@ -65,7 +65,14 @@ public class DataManager : MonoBehaviour
 
     public void loadBookmark()
     {
-        bookmarkSave = Instance.bookmarkSaveManager.loadSave();
+        BookmarkSave loadedBookmark = Instance.bookmarkSaveManager.loadSave();
+
+        if(loadedBookmark == null)
+        {
+            return;
+        }
+
+        bookmarkSave = loadedBookmark;
         this.progressData = bookmarkSave.progressData;
     }
 

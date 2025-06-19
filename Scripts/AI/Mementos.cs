@@ -39,12 +39,12 @@ public class StateAI
 
         int movesScore = 0;
 
-        foreach(MoveMemento move in stateMoves)
+        foreach (MoveMemento move in stateMoves)
         {
             TileMemento tile = gridManagerMemento.GetTileAtPoint(move.Tile.position);
             BaseUnitMemento unit = gridManagerMemento.GetTileAtPoint(move.Unit.position).OccupiedUnit;
 
-            if(unit == null)
+            if (unit == null)
             {
                 unit = tile.OccupiedUnit;
             }
@@ -59,7 +59,7 @@ public class StateAI
             movesScore += move.Score;
         }
 
-        if(enemyTurn)
+        if (enemyTurn)
         {
             this.stateScore += movesScore;
         }
@@ -71,7 +71,7 @@ public class StateAI
 
     public void setAllUnits()
     {
-        foreach(BaseUnitMemento hero in unitManagerMemento.heroes) 
+        foreach (BaseUnitMemento hero in unitManagerMemento.heroes)
         {
             if (hero == null)
             {
@@ -95,7 +95,7 @@ public class StateAI
         bool enemiesRemain = unitManagerMemento.enemiesRemain();
         bool heroesRemain = unitManagerMemento.heroesRemain();
 
-        if(enemiesRemain && heroesRemain)
+        if (enemiesRemain && heroesRemain)
         {
             return false;
         }
@@ -163,7 +163,7 @@ public class GridManagerMemento
 
         Dictionary<Vector2, Tile> tiles = gridManager.getTiles();
 
-        foreach(KeyValuePair<Vector2, Tile> pair in tiles)
+        foreach (KeyValuePair<Vector2, Tile> pair in tiles)
         {
             this.tiles[pair.Key] = new TileMemento(pair.Value);
         }

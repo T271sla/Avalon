@@ -271,7 +271,7 @@ public class BaseUnitMemento
         possibleMoves.Clear();
         possibleTargets.Clear();
 
-        if(!engaged)
+        if (!engaged)
         {
             foreach (BaseUnitMemento rival in rivalUnits)
             {
@@ -281,7 +281,7 @@ public class BaseUnitMemento
                 }
             }
 
-            if(possibleTargets.Count > 0) 
+            if (possibleTargets.Count > 0)
             {
                 engaged = true;
             }
